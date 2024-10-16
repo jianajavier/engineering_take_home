@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :clients, only: [] do
+      resources :clients, only: [:index] do
         resources :buildings, only: [:create]
         resources :custom_fields, only: [:index]
       end

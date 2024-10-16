@@ -65,7 +65,7 @@ class Api::V1::BuildingsController < ApplicationController
         # Create a hash for each building and include the associated client and address
         building_json = building.as_json(
           include: {
-            client: { only: :name },
+            client: { only: [:id, :name] },
             address: {}
           }
         )
